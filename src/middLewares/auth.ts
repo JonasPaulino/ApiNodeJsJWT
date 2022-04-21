@@ -12,7 +12,7 @@ export const Auth = {
         //Fazer verificação de Auth
         if(req.headers.authorization){ //se foi enviado algum codigo no authorization herder da requisição então passe.
         
-            const [authType, token] = req.headers.authorization.split('');
+            const [authType, token] = req.headers.authorization.split(' '); //devine o espaço entre a palavra Bearer e o token que está vindo
             if(authType === 'Bearer'){
                
                 try { //roda um try pra caso der erro
